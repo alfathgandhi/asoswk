@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">JurnalModul7</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tambah">Tambah</string>
+    <string name="title"><![CDATA[<h3>List Diary Kamu</h3>]]></string>
+    <string name="time"><![CDATA[<b>Start:</b>]]></string>
+    <string name="hal_tambah">Hal Tambah</string>
+    <string name="nama_alfath_gandhi_iskandar_n_kelas_42_04_n_nim_6706180093">NAMA : ALFATH GANDHI ISKANDAR \n KELAS : 42-04 \n NIM: 6706180093</string>
+</resources>

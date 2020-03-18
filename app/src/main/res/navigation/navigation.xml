@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/tampilDiary">
+
+    <fragment
+        android:id="@+id/tampilDiary"
+        android:name="com.d3if0093.jurnalmodul7.TampilDiary"
+        android:label="fragment_tampil_diary"
+        tools:layout="@layout/fragment_tampil_diary" >
+        <action
+            android:id="@+id/action_tampilDiary_to_tambahDiary"
+            app:destination="@id/tambahDiary" />
+    </fragment>
+    <fragment
+        android:id="@+id/tambahDiary"
+        android:name="com.d3if0093.jurnalmodul7.TambahDiary"
+        android:label="fragment_tambah_diary"
+        tools:layout="@layout/fragment_tambah_diary" >
+        <action
+            android:id="@+id/action_tambahDiary_to_tampilDiary"
+            app:destination="@id/tampilDiary" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.d3if0093.jurnalmodul7.About"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>
