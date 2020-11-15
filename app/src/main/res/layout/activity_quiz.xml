@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="10dp"
+   >
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+
+        <VideoView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/perhatian"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Harap Simak Video Sampai Selesai Untuk Memulai Quiz"
+        app:layout_constraintBottom_toTopOf="@+id/mulai_quiz"
+        android:fontFamily="@font/product_sans_bold_italic"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll" />
+    <ScrollView
+       android:layout_marginTop="20dp"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame"
+        >
+    <TextView
+        android:id="@+id/penjelasan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/product_sans_bold"
+        android:gravity="center|center_horizontal"
+        android:textSize="15sp"
+        android:padding="20dp"
+        />
+</ScrollView>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/soalKe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_soal"
+
+        />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_soal"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:layout_constraintTop_toBottomOf="@id/soalKe"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/test"
+        android:paddingVertical="20dp"
+        android:textSize="20sp"
+        android:gravity="start"
+        android:paddingHorizontal="20dp"
+       android:background="@drawable/garis"
+        android:layout_marginVertical="20dp"
+
+        />
+    <RadioGroup
+        android:visibility="gone"
+        android:id="@+id/radioGrup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/tv_soal">
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/card_background_pemasukan"
+            android:text="AAAA"/>
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:background="@drawable/card_background_pemasukan"
+            android:layout_height="50dp"
+            android:layout_marginVertical="10dp"
+            android:text="BBBB"/>
+        <RadioButton
+            android:id="@+id/radio3"
+            android:background="@drawable/card_background_pemasukan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:text="CCCC"/>
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:background="@drawable/card_background_pemasukan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="CCCC"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/mulai_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/product_sans_bold"
+        android:padding="5dp"
+        android:text="@string/mulai"
+        android:textColor="@color/putih"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frame"
+        app:layout_constraintEnd_toEndOf="@+id/frame"
+        app:layout_constraintStart_toStartOf="@+id/frame"
+        app:layout_constraintTop_toTopOf="@+id/frame" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

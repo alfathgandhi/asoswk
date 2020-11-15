@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "475770716316",
+    "firebase_url": "https://mp-training.firebaseio.com",
+    "project_id": "mp-training",
+    "storage_bucket": "mp-training.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475770716316:android:413674365f50bde2002d59",
+        "android_client_info": {
+          "package_name": "org.d3ifcool.quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475770716316-540lks8pnndfls1fm9t5v20jl01le1jd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.d3ifcool.quiz",
+            "certificate_hash": "fc2bd862f067440cf7c11c5721546da5e93865b7"
+          }
+        },
+        {
+          "client_id": "475770716316-j54ed284aehb854a0akc64bdg5p19rab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwfCzRGyK4NWc2dv00ef5FqTdcAUIxZqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475770716316-j54ed284aehb854a0akc64bdg5p19rab.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

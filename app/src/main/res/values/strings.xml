@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Refresh FIOS</string>
+    <string name="welcome">Welcome</string>
+    <string name="daftar">Daftar</string>
+    <string name="belum_memiliki_akun">Belum memiliki akun?</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="login">Login</string>
+    <string name="home">Home</string>
+    <string name="join_quiz">Join Quiz</string>
+    <string name="profile">Profile</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="record_nilai">Record Nilai Anda</string>
+    <string name="stage">STAGE</string>
+    <string name="pilih_stage_untuk_memulai_pembelajaran">Pilih stage untuk memulai pembelajaran</string>
+    <string name="test">TEST</string>
+    <string name="mulai">Mulai Quiz</string>
+    <string name="next"><![CDATA[>]]></string>
+    <string name="previous"><![CDATA[<]]></string>
+    <string name="ini_merupakan_penjelasan_materi">ini merupakan penjelasan materi</string>
+    <string name="masukan_password_lama">Masukan password lama</string>
+    <string name="field">"Field tidak boleh kosong"</string>
+    <string name="tidaksama">"Password tidak terkonfirmasi"</string>
+    <string name="berhasil">"Password berhasil diupdate"</string>
+    <string name="gagal">"Password gagal diupdate"</string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginVertical="10dp"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:fontFamily="@font/product_sans_bold"
+        android:id="@+id/passlam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/masukan_password_lama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:padding="5dp"
+        android:layout_marginVertical="5dp"
+        android:inputType="textPassword"
+        android:id="@+id/et_passLama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_layout"
+        app:layout_constraintTop_toBottomOf="@+id/passlam"
+        tools:layout_editor_absoluteX="40dp" />
+    <TextView
+        android:fontFamily="@font/product_sans_bold"
+        android:id="@+id/passLama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukan password baru"
+        app:layout_constraintTop_toBottomOf="@+id/et_passLama"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+    <EditText
+        android:padding="5dp"
+        android:layout_marginVertical="5dp"
+        android:inputType="textPassword"
+        android:background="@drawable/login_layout"
+        android:id="@+id/et_password_baru_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/passLama"/>
+    <TextView
+        android:fontFamily="@font/product_sans_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/konfir"
+        android:text="Konfirmasi password baru"
+        app:layout_constraintTop_toBottomOf="@+id/et_password_baru_dialog"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <EditText
+        android:padding="5dp"
+        android:layout_marginVertical="5dp"
+        android:inputType="textPassword"
+        android:id="@+id/et_konfirmasi_password_baru_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/konfir"
+        android:background="@drawable/login_layout"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

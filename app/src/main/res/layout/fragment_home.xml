@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar_home"
+
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome"
+       android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="@font/product_sans_bold"
+        android:text="Selamat Datang"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/circleImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:visibility="gone"
+        android:id="@+id/circleImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="30dp"
+        android:src="@color/merah"
+        app:layout_constraintBottom_toTopOf="@+id/et_nama_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/et_nama_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Lengkap"
+        android:textSize="25sp"
+        android:fontFamily="@font/product_sans_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/et_nrp_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NRP"
+        android:textSize="25sp"
+        android:fontFamily="@font/product_sans_regular"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_nama_home" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/et_berada_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sekarang anda berada di "
+        android:textSize="25sp"
+        android:fontFamily="@font/product_sans_regular"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_nrp_home" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/et_stage_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STAGE 1"
+        android:textSize="28sp"
+        android:fontFamily="@font/product_sans_bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_berada_home" />
+
+    <Button
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Your Pass"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/product_sans_regular"
+        android:background="@drawable/custom_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/bt_pass_home"
+        app:layout_constraintTop_toBottomOf="@id/et_berada_home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
