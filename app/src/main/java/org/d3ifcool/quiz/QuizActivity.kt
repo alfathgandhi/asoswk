@@ -49,6 +49,9 @@ class QuizActivity() :AppCompatActivity(){
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         val id = intent.extras?.getString("id")
+        val idSesir = intent.extras?.getString("idSesi")
+        val sizer = intent.extras?.getStringArrayList("size")
+
         super.onCreate(savedInstanceState)
         window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
         setContentView(R.layout.activity_quiz)
@@ -69,6 +72,8 @@ class QuizActivity() :AppCompatActivity(){
         val app = requireNotNull(this).application
         val viewModelFactory = QuizViewModelFactory(database, app, id!!,username.currentUser!!.uid)
         viewmodel = ViewModelProviders.of(this, viewModelFactory).get(QuizViewModel::class.java)
+        viewmodel.getSesi(idSesir!!)
+
 
         viewmodel.soal.observe(this, Observer { soal ->
             soal.shuffle()
@@ -160,8 +165,9 @@ class QuizActivity() :AppCompatActivity(){
                         .setPositiveButton("Oke") { dialog, which ->
                             val intent = Intent(this, MainActivity::class.java)
 
-                            startActivity(intent)
-                            finishAffinity()
+
+                                viewmodel.hapusUser(sizer!!,idSesir!!)
+
 
 
 
@@ -171,7 +177,8 @@ class QuizActivity() :AppCompatActivity(){
                                     username.currentUser!!.uid,
                                     scoreAkhir.toString(),
                                     tanggal,
-                                    "Sesi 1"
+                                    viewmodel.namaSesi
+
                                 )
                             )
 
@@ -182,7 +189,8 @@ class QuizActivity() :AppCompatActivity(){
 
                             database.child("User").child(FirebaseAuth.getInstance().currentUser!!.uid).child("nilai").child(jadi).setValue(jadinyaa)
 
-                            finish()
+                            startActivity(intent)
+                            finishAffinity()
                         }.setTitle("Quiz berakhir")
 
 
@@ -272,4 +280,6 @@ class QuizActivity() :AppCompatActivity(){
         }
 
     }
+
+
 }

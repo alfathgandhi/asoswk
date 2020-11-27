@@ -66,7 +66,7 @@ class RegisterActivity:AppCompatActivity() {
                             }
                             dialog.loadingAlertDialog()
                             databaseReference = FirebaseDatabase.getInstance().getReference("User").child(id!!)
-                            val value = User(nama, nrp, seksi,hp , email, arrayListOf(0,0,0,0,0),"https://firebasestorage.googleapis.com/v0/b/mp-training.appspot.com/o/man.png?alt=media&token=0c7ce5d2-e6c5-452d-b764-78b8f9e74b5d")
+                            val value = User(nama, nrp, seksi,hp , email, arrayListOf(-1,-1,-1,-1,-1),"https://firebasestorage.googleapis.com/v0/b/mp-training.appspot.com/o/man.png?alt=media&token=0c7ce5d2-e6c5-452d-b764-78b8f9e74b5d","Stage 1")
 
                             databaseReference!!.setValue(value).addOnCompleteListener {
                                 val intent = Intent(this@RegisterActivity, LoginActivity::class.java)

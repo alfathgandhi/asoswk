@@ -12,10 +12,11 @@ class User {
     var username : String?= null
     var nilai : ArrayList<Int>?=null
     var profile : String?=null
+    var posisi: String?=null
 
     constructor(){}
 
-    constructor(nama:String?,nrp:String?,seksi:String?,noHp:String?,username:String?,nilai: ArrayList<Int>?,profile : String?)
+    constructor(nama:String?,nrp:String?,seksi:String?,noHp:String?,username:String?,nilai: ArrayList<Int>?,profile : String?,posisi:String?)
     {
         this.nama = nama
         this.nrp = nrp
@@ -24,6 +25,7 @@ class User {
         this.username = username
         this.nilai = nilai
         this.profile=profile
+        this.posisi=posisi
 
 
 

@@ -39,6 +39,21 @@ class LoginActivity:AppCompatActivity() {
             startActivity(intent)
         }
 
+        findViewById<TextView>(R.id.tv_lupa).setOnClickListener {
+            if(TextUtils.isEmpty(mUsername?.text.toString())){
+                Toast.makeText(this@LoginActivity, "Masukan Email Address", Toast.LENGTH_LONG).show()
+
+            }
+            else{
+                auth?.sendPasswordResetEmail(mUsername?.text.toString())?.addOnCompleteListener {
+                if(it.isSuccessful){
+                    Toast.makeText(this@LoginActivity, "Cek Inbox Email Anda", Toast.LENGTH_LONG).show()
+
+                }
+            }
+        }
+        }
+
 
     }
     private fun login() {
@@ -49,11 +64,14 @@ class LoginActivity:AppCompatActivity() {
         val email = mUsername!!.text.toString().trim()
         val password = mPassword!!.text.toString().trim { it <= ' ' }
         if (TextUtils.isEmpty(email)) {
+            dialog.dismissDialog()
             Toast.makeText(this@LoginActivity, "Masukan Email Address", Toast.LENGTH_LONG).show()
+
             return
 
         }
         if (TextUtils.isEmpty(password)) {
+            dialog.dismissDialog()
             Toast.makeText(this@LoginActivity, "Masukan Password", Toast.LENGTH_LONG).show()
             return
 
@@ -65,11 +83,13 @@ class LoginActivity:AppCompatActivity() {
                dialog.dismissDialog()
             } else {
 
+
                 session!!.setLoggedin(true)
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
                 finish()
+                dialog.dismissDialog()
             }
         }
     }

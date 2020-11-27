@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.database.*
+import org.d3ifcool.quiz.obj.Sesi
 import org.d3ifcool.quiz.obj.Soal
 import org.d3ifcool.quiz.obj.Stage
 import org.d3ifcool.quiz.obj.User
@@ -18,6 +19,7 @@ class QuizViewModel(val database: DatabaseReference,application:Application, val
 
     lateinit var namaStage:String
     lateinit var namaUser:String
+    lateinit var namaSesi:String
 
 
     private val xlink=MutableLiveData<String>()
@@ -49,12 +51,58 @@ Thread1().start()
     fun tambahCount(){
         xcount.value=xcount.value?.plus(1)
     }
-    fun minusCount(){
-        xcount.value=xcount.value?.minus(1)
+
+    fun hapusUser(size:ArrayList<String>,idSesi:String ){
+
+        for(x in 0 until size.size){
+
+            if(size.get(x).equals(idUser)){
+
+                size.removeAt(x)
+
+
+
+            }
+
+
+        }
+
+        database.child("Sesi").child(idSesi).child("idUser").setValue(size)
+
+
+
+
     }
-    fun minusScore(){
-        xscore.value=xscore.value?.minus(1)
+
+    fun getSesi(idSesi: String){
+
+        Thread(){
+            val sesi  = database.child("Sesi").child(idSesi)
+            sesi.addListenerForSingleValueEvent(object : ValueEventListener{
+
+
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    namaSesi = snapshot.getValue(Sesi::class.java)?.sesi!!
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+
+
+
+            })
+
+
+
+
+
+
+        }.start()
+
+
     }
+
 
 
 inner class Thread1():Thread(){
@@ -91,6 +139,8 @@ inner class Thread1():Thread(){
 
             }
         })
+
+
 
 
 

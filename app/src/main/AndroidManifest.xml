@@ -42,6 +42,16 @@
 
         </activity>
         <activity
+            android:name="org.d3ifcool.quiz.ShowImage"
+            android:label="Photo"
+
+            android:screenOrientation="locked">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.d3ifcool.quiz.MainActivity" />
+
+        </activity>
+        <activity
             android:name="org.d3ifcool.quiz.MainActivity"
             android:label="Menu Utama"
             android:screenOrientation="locked" />

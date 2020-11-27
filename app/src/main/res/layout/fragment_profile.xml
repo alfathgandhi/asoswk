@@ -12,6 +12,29 @@
         android:paddingBottom="40dp"
         tools:context=".RegisterActivity">
 
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/imageCircle"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@color/abumuda" />
+
+            <ImageView
+                android:id="@+id/addFhoto"
+                android:background="@drawable/bulat"
+                android:padding="7dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_add_a_photo_24" />
+        </RelativeLayout>
+
         <Button
             android:id="@+id/bt_submit"
             android:layout_width="0dp"
@@ -156,7 +179,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.06"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+            app:layout_constraintTop_toBottomOf="@+id/relative" />
 
         <TextView
             android:id="@+id/textView26"
